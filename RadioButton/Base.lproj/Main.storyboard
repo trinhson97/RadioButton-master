@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vNK-8A-7bw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="SIq-DS-l1w">
+            <objects>
+                <viewController id="vNK-8A-7bw" customClass="ViewController" customModule="RadioButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5dr-V0-iNf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="AUu-W5-i2D">
+                                <rect key="frame" x="148.5" y="296" width="77" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sH9-0Y-joE">
+                                        <rect key="frame" x="0.0" y="0.0" width="64" height="25"/>
+                                        <state key="normal" title="Male" image="unchecked">
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="selected" image="checked"/>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="vNK-8A-7bw" eventType="touchUpInside" id="bt8-Lz-dPa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7Q-HP-xjM">
+                                        <rect key="frame" x="0.0" y="25" width="77" height="25"/>
+                                        <state key="normal" title="Check" image="unchecked">
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="selected" image="checked"/>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="vNK-8A-7bw" eventType="touchUpInside" id="2eg-gY-3VY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2B-h7-MC0">
+                                        <rect key="frame" x="0.0" y="50" width="46" height="25"/>
+                                        <state key="normal" title="!!!!" image="unchecked">
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="selected" image="checked"/>
+                                        <connections>
+                                            <action selector="buttonClicked:" destination="vNK-8A-7bw" eventType="touchUpInside" id="xfj-EB-qJV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AUu-W5-i2D" firstAttribute="centerX" secondItem="5dr-V0-iNf" secondAttribute="centerX" id="C8K-fP-7Nx"/>
+                            <constraint firstItem="AUu-W5-i2D" firstAttribute="centerY" secondItem="5dr-V0-iNf" secondAttribute="centerY" id="vX8-iS-LQq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hI4-1N-oZn"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="radioButton" destination="sH9-0Y-joE" collectionClass="NSMutableArray" id="4j1-4i-YpT"/>
+                        <outletCollection property="radioButton" destination="w7Q-HP-xjM" collectionClass="NSMutableArray" id="89P-Zd-qoC"/>
+                        <outletCollection property="radioButton" destination="o2B-h7-MC0" collectionClass="NSMutableArray" id="6K6-qM-uMP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VN9-v2-1gf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353" y="18"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checked" width="25" height="25"/>
+        <image name="unchecked" width="25" height="25"/>
+    </resources>
+</document>
